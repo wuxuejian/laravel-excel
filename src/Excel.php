@@ -79,7 +79,7 @@ class Excel implements Exporter, Importer
 		return $this->reader->toCollection($import, $filePath, $readerType, $disk);
 	}
 
-	protected function export($export, string $fileName, string $writerType = null): TemporaryFile
+	public function export($export, string $fileName, string $writerType = null): TemporaryFile
 	{
 		$writerType = FileTypeDetector::detectStrict($fileName, $writerType);
 
